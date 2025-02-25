@@ -1,0 +1,33 @@
+
+
+
+{
+  "name": "wag",
+  "displayName": "WAG",
+  "description": "Weigthed Attibute Grammar",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "wag",
+      "aliases": ["Weighte Attribute Grammar", "wag"],
+      "extensions": [".wag"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "wag",
+      "scopeName": "source.wag",
+      "path": "./syntaxes/wag.tmLanguage.json"
+    }]
+  }
+}
+
+
+
+
+

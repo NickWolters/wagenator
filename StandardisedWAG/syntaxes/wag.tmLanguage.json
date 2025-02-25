@@ -1,0 +1,64 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Weighted Attribute Grammar",
+	"patterns": [
+		{ "include": "#keywords" },
+		{ "include": "#strings" },
+		{ "include": "#variables" },
+		{ "include": "#comments" },
+		{ "include": "#relations" }
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.compare",
+					"match": "\\b(if|else|then|in)\\b"
+				},
+				{
+					"name": "keyword.control.bool",
+					"match": "true|false"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.wag",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.wag",
+					"match": "\\\\."
+				}
+			]
+		},
+		"variables" : {
+			"patterns" : [
+				{
+					"name": "variable.language",
+					"match": "[&$*][a-zA-Z_]*"
+				}
+			]
+		},
+		"comments": {
+			"begin": "/\\*",
+			"end": "\\*/",
+			"patterns" : [
+				{
+					"name": "comment.multiline",
+					"match": "[a-zA-z0-9]"
+				}
+			]
+		},
+		"relations": {
+			"patterns": [
+				{
+					"name" : "keyword.relation.arrow",
+					"match": "->"
+				}
+			]
+		}
+	
+	},
+	"scopeName": "source.wag"
+}

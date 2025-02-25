@@ -1,0 +1,1 @@
+# Standardised WAG (SWAG)
