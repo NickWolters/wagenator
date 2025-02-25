@@ -1,0 +1,8 @@
+Pokemon<&shiny, &nickname, &gender, &item> -> Info<&nickname, &gender, &item>{$d_ability = false; $d_shiny = false; $d_level = false; $d_happy = false; $d_nat = false; $d_ev = false; $d_iv = false} Optionals<$d_ability, $d_shiny, $d_level, $d_happy, $d_nat, $d_ev, $d_iv, $shiny>{$move_count = 0} Moves<$move_count>+;
+Pokemon<&shiny, &nickname, &gender, &item> -> Info<&nickname, &gender, &item>{$d_ability = false; $d_shiny = false; $d_level = false; $d_happy = false; $d_nat = false; $d_iv = false} Movements<$move_count>( &d_condition[0],"move_type=","", &d_shape[0], _type[1] ); // Move to a point and wait for the next move
+
+Here, we're moving away from the top of a square, but keeping an eye on the bottom for any changes. As we can see that this function is very useful, the move counts are very close to the next move, even though there are some missing entries. As an improvement, this function is slightly more complex, in that it adds some information about where the move ends and how long it will take to complete.
+
+Note that, in this case, the move_count variable is the move level that the move is on. Since moves above the move_count are not checked, they will be skipped. For example:
+
+/* ---------------------------------------- * Pokemon with the Pokemon-

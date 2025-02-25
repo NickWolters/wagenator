@@ -1,0 +1,4 @@
+Pokemon<&shiny, &nickname, &gender, &item> -> Info<&nickname, &gender, &item>{$d_ability = false; $d_shiny = false; $d_level = false; $d_happy = false; $d_nat = false; $d_ev = false; $d_iv = false} Optionals<$d_ability, $d_shiny, $d_level, $d_happy, $d_nat, $d_ev, $d_iv, $shiny>{$move_count = 0} Moves<$move_count>+;
+Pokemon<&shiny, &nickname, &gender, &item> -> Info<&nickname, &gender, &item>{$d_ability = false; $d_shiny = false; $d_level = false; $d_happy = false; $d_nat = false; $d_iv = false} Optionals<$d_ability, $d_shiny, $d_level, $d_happy, $d_nat, $d_iv, $shiny>{$move_count = 0} Moves<$move_count>+;
+Pokemon<&shiny, &nickname, &gender, &item> -> Info<&nickname, &gender, &item>{$d_ability = false; $d_shiny = false; $d_level = false; $d_happy = false; $d_nat = false; $d_iv = false} Optionals<$d_ability, $d_shiny, $d_level, $d_happy, $d_nat, $d_iv, $shiny>{$move_count = 0} Moves<$move_count>+;
+Pokemon
