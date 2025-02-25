@@ -1,0 +1,83 @@
+<Expr> ::= <WAG>
+<WAG> ::= <Metadata><Rules> | <Rules>
+
+<Metadata> ::= <Metas><MetaDelim> 
+<MetaDelim> ::= ****
+<Metas> ::= <Meta> | <Meta><Metas>
+<Meta> ::= <Include> | <Config>
+<Include> ::= ::<Identifier>;
+           | <Identifier>::<Identifier>;
+           | ::<Identifier>;<Include>
+           | <Identifier>::<Identifier>;<Include>
+<Config> ::= <Identifier>:<StringChars>;
+
+<Rules> ::= <Rule> | <Rule> <Rules>
+<Rule> ::= <Identifier> -> <Rhs>; | <Identifier><<LhsAttributes>> -> <Rhs>;
+<Rhs> ::= <Chunks>
+
+<Chunks> ::= <Chunk> | (<Chunk>)<EBNFType> 
+           | <Chunk> # <Chunks> 
+           | (<Chunk>)<EBNFType> # <Chunks>
+<Chunk> ::= <Symbol> | <Weight> <Symbol>
+
+<LhsAttributes> ::= <InheritedAttributes>
+                  | <SynthesizedAttributes>, <LhsAttributes>
+                  | <InheritedAttributes>
+                  | <SynthesizedAttributes>, <LhsAttributes>
+<Weight> ::= [<Fraction>] | [<InheritedAttributes>] | [<Assignment>]
+<Symbol> ::= <NonTerminal> | <Variable>
+
+<NonTerminal> ::= <Identifier> | <Identifier> <NTAttr>
+<NTAttr> ::= <<Assignment>>
+<EBNFType> ::= @ | ~ | ?
+
+<Assignments> ::= {<Assignment>} | {<Assignment><Assignments>}
+<Assignment> ::=  <AttrIdentifier> = <Expression> 
+                | <AttrIdentifier> = <Variable>
+
+<Expression> ::= <Comparison> | <If>
+<If> ::= if <Disjunct> then <Disjunct>
+        | if <Disjunct> then <Disjunct> else <Expression>
+<Disjunct> ::= <Conjunct> && <Disjunct> | <Conjunct>
+<Conjunct> ::= <Comparison> // <Conjunct> 
+        | <Comparison>
+        | <BoolOp>
+
+<Comparison> ::= <NumericOp> <CompOp> <NumericOp>
+<CompOp> ::= < | <= | > | >= | == | !=
+<NumericOp> ::= <Numeric> | <Numeric> <SumP> 
+<SumP> ::= <SumOp> <Numeric> | <SumOp> <Numeric> <SumP>
+<SumOp> ::= + | - | / | * | %
+<BoolOp> ::= !<Bool> | <Bool>
+
+<AttrIdentifier> ::= <InheritedAttributes>
+                  | <SynthesizedAttributes>
+                  | <LocalAttributes>
+<InheritedAttributes> ::= *<Identifier>
+<SynthesizedAttributes> ::= &<Identifier>
+<LocalAttributes> ::= $<Identifier>
+<Identifier> ::= <StringChars>
+
+<Variable> ::= <Numeric> | <String> | <Bool> | <Character>
+<Numeric> ::= <Int> | <Float>
+<Float> ::= <Int>.<Digits>
+<Int> ::= <Digits> | -<Digits> | 0
+<Fraction> ::= 0.<Digit>
+<Digits> ::= <Digit> | <DigitInclZero> | <Digit><Digits>
+<DigitInclZero> ::= 0 | <Digit>
+<Digit> ::= 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+
+<String> ::= "<StringChars>"
+<StringChars> ::= <Letter> | <Letter><Character> | <Letter><StringChars>
+
+<SingleCharacter> ::= '<Character>'
+<Character> ::= <Letter> | <Digit>
+
+<Letter> ::= A | B | C | D | E | F | G | H | I | J
+           | K | L | M | N | O | P | Q | R | S | T
+           | U | V | W | X | Y | Z | a | b | c | d
+           | e | f | g | h | i | j | k | l | m | n
+           | o | p | q | r | s | t | u | v | w | x
+           | y | z
+
+<Bool> ::= true | false
