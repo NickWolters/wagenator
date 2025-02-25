@@ -1,0 +1,87 @@
+;; This is a RANDOMLY GENERATED PROGRAM.
+;; Fuzzer: simple-racket
+;; Version: simple-racket 2.0.7 (ca130f9), xsmith 2.0.7 (ca130f9), in Racket 8.10 (vm-type chez-scheme)
+;; Options: --output-file racket-gen.txt
+;; Seed: 1848725001
+;; 
+
+#lang racket/base
+(define (safe-divide numerator divisor)
+  (if (equal? 0 divisor) 0 (/ numerator divisor)))
+(define (safe-car list fallback) (if (null? list) fallback (car list)))
+(define (safe-cdr list fallback) (if (null? list) fallback (cdr list)))
+(define (immutable-vector-set vec index-raw val)
+  (define index (modulo index-raw (vector-length vec)))
+  (vector->immutable-vector
+   (build-vector
+    (vector-length vec)
+    (λ (i) (if (equal? i index) val (vector-ref vec i))))))
+(define lift_34 #t)
+(define lift_33 (void))
+(define lift_32 "j`qQ@ZS\"5J'PI[]L\"M k{Ss!p>HB7F-.qp-74gp|*4{ys[pPD`")
+(define lift_31
+  (list
+   "P$i%\\T`HiJU/Yf!~?Apu$wHTvv{$<a7nC'yx Kot5^:f7]H*U>q_|Pg(Q#I,I_D?&mOx>;X6xS'j"
+   lift_32
+   lift_32))
+(define lift_30 lift_31)
+(define lift_29 lift_30)
+(define lift_26 (lambda (arg_27 arg_28) -978890348))
+(define lift_25 lift_26)
+(define lift_24 lift_25)
+(define lift_23 lift_24)
+(define lift_22 #f)
+(define lift_21 lift_22)
+(define lift_20 (vector #f lift_21 lift_22))
+(define lift_19 (make-hash (list (cons 'c (void)))))
+(define lift_18 (make-hash (list (cons 'c (void)))))
+(define lift_17 (vector-immutable lift_18 lift_18 lift_19 lift_19))
+(define lift_14 (lambda (arg_15 arg_16) lift_17))
+(define lift_13
+  "AKE62|w?n|S]PijKv\"td7Ln)@N#||H|Sj>TH>xOd'HOp7G`;5~#}80B^;ev\"a@;TeN#J;2rn}WH6DwrzT;SK}UO~&T'3\"5|.y!N]SN|%\")8TM<\"1Z);aKeiA:rdN5")
+(define lift_12 (make-hash (list (cons 'b lift_13))))
+(define lift_11 lift_12)
+(define lift_10 179476595)
+(define lift_9 (hash 'g lift_10 'c "X,-Jy&~4bp^_Z:5-OhQY*rBmswvsqWk\"ke|P"))
+(define lift_8 #t)
+(define lift_7 (vector-immutable))
+(define lift_5 (lambda (arg_6) lift_7))
+(define lift_4 lift_5)
+(define lift_3 lift_4)
+(define lift_2 (void))
+(define program-result
+  (begin
+    (safe-car
+     (let* ((lift_1 (list (void) lift_2 lift_2))) (let* () lift_1))
+     (let ((vec (#%app lift_3 (list lift_8 #f lift_8 lift_8 #t))))
+       (if (eq? 0 (vector-length vec))
+         (hash-set!
+          lift_11
+          'b
+          "*CU,?x0)y~cp6>@kSm=D%hV9o _$}H:(7638~E#}VPAo\\q4a!+ChFt5s7vo#a.D_\"/5QRL$8z]/(NSt!_!e)r aoxeh'n9thP(O -z\\d<~M;]gEnC*qPexLZ)o")
+         (vector-ref vec (modulo (hash-ref lift_9 'g) (vector-length vec))))))
+    (hash-ref
+     (let ((vec (#%app lift_14 lift_20 lift_13)))
+       (if (eq? 0 (vector-length vec))
+         (make-hash (list (cons 'c lift_33)))
+         (vector-ref
+          vec
+          (modulo (#%app lift_23 lift_22 lift_29) (vector-length vec)))))
+     'c)
+    (if (not (safe-car (list lift_22 lift_34 lift_21 lift_8 #f) lift_34))
+      (let ((b_35 (vector)))
+        (for/vector ((loopvar_36 b_35)) (> lift_10 lift_10)))
+      lift_20)))
+(begin
+  (void)
+  (printf "Variable ~a value: ~v\n" 'lift_34 lift_34)
+  (printf "Variable ~a value: ~v\n" 'lift_33 lift_33)
+  (printf "Variable ~a value: ~v\n" 'lift_32 lift_32)
+  (printf "Variable ~a value: ~v\n" 'lift_22 lift_22)
+  (printf "Variable ~a value: ~v\n" 'lift_21 lift_21)
+  (printf "Variable ~a value: ~v\n" 'lift_13 lift_13)
+  (printf "Variable ~a value: ~v\n" 'lift_10 lift_10)
+  (printf "Variable ~a value: ~v\n" 'lift_8 lift_8)
+  (printf "Variable ~a value: ~v\n" 'lift_2 lift_2))
+
+

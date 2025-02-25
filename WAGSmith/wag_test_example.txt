@@ -1,0 +1,151 @@
+// This is a RANDOMLY GENERATED PROGRAM.
+// Fuzzer: simple-wag
+// Version: simple-wag 2.0.7 (ca130f9), xsmith 2.0.7 (ca130f9), in Racket 8.10 (vm-type chez-scheme)
+// Options: --output-file test.txt
+// Seed: 1893289230
+// 
+
+****
+Start of the generated WAG Code.
+****
+
+
+lift_198 ->  1116391911;
+lift_197 ->  ({b: ({g: lift_198})});
+lift_192 ->  [];
+lift_191 ->  lift_192;
+lift_190 ->  lift_191;
+lift_189 ->  lift_190;
+lift_188 ->  true;
+lift_187 ->  false;
+lift_186 ->  [true, lift_187, true, lift_188, lift_187];
+lift_185 ->  lift_186;
+lift_184 ->  [lift_185, lift_189, lift_186, lift_186];
+lift_182 ->  182656372;
+lift_181 ->  ({a: lift_182});
+lift_180 ->  lift_181;
+lift_175 ->  false;
+lift_174 ->  ({a: lift_175});
+lift_173 ->  ({d: lift_174});
+lift_172 ->  lift_173.d;
+lift_171 ->  1340383588;
+lift_170 ->  126865899;
+lift_169 ->  1976489753;
+lift_168 ->  ({e: [lift_169, 1738946014, lift_170, lift_170, lift_171]});
+lift_167 ->  lift_168;
+lift_165 ->  ({});
+lift_164 ->  ({});
+lift_163 ->  [({}), ({}), lift_164, ({}), lift_165];
+lift_159 ->  1473710288;
+lift_158 ->  1797468107;
+lift_157 ->  [-335729611, lift_158, lift_158, lift_159];
+lift_156 ->  [({e: lift_157})];
+lift_155 ->  lift_156;
+lift_150 ->  1673550862;
+lift_149 ->  lift_150;
+lift_148 ->  ({e: lift_149});
+lift_147 ->  lift_148;
+lift_146 ->  lift_147;
+lift_145 ->  -1468587750;
+lift_144 ->  lift_145;
+lift_143 ->  621607329;
+lift_142 ->  ({e: lift_143});
+lift_141 ->  lift_142;
+lift_140 ->  -359080922;
+lift_139 ->  [({e: lift_140}), lift_141, lift_141, lift_141];
+lift_138 ->  [lift_139, lift_139];
+lift_137 ->  array_safe_reference(lift_138, lift_144, [lift_142, lift_146]);
+lift_135 ->  -1235459317;
+lift_134 ->  1717228235;
+lift_130 ->  <arg_131, arg_132, arg_133>;
+lift_129 ->  ({f: lift_130});
+lift_128 ->  lift_129;
+lift_122 ->  <arg_123, arg_124, arg_125, arg_126, arg_127>;
+lift_113 ->  <arg_114, arg_115, arg_116>;
+lift_112 ->  ({b: ({f: lift_113})});
+lift_111 ->  lift_112;
+lift_107 ->  <arg_108, arg_109, arg_110>;
+lift_106 ->  ({f: lift_107});
+lift_105 ->  lift_106;
+lift_104 ->  [({b: lift_105}), lift_111];
+lift_98 ->  <arg_99, arg_100, arg_101, arg_102, arg_103>;
+lift_97 ->  lift_98;
+lift_96 ->  lift_97;
+lift_93 ->  -488210641;
+lift_92 ->  ({e: lift_93});
+lift_89 ->  false;
+lift_86 ->  <arg_87>;
+lift_85 ->  1542866807;
+lift_81 ->  <>;
+lift_80 ->  lift_81;
+lift_79 ->  ({e: lift_80});
+lift_76 ->  "V_6mC7F0m^~?$bjwJ'+|o k1V/KSI]3k4";
+lift_75 ->  true;
+lift_73 ->  <>;
+lift_71 ->  "8puNcLWUa=fP5?c+uUPdW[0O}&oBM)_A'c>QZg`v>%^@U'VV6TPrw1-cj9Ex2J|/;+})'a.%Xr_u?(M @y]6=LsBvL";
+lift_66 ->  854675232;
+lift_63 ->  <arg_64, arg_65>;
+lift_60 ->  "JGlneD{jCS6dHC%l\"dk)`yG8C*y)NZ0O[AW1JQ<d7Vz?PnfrZ3v,r.;6di y ><9mfyw;DWI#Lo";
+lift_58 ->  true;
+lift_57 ->  false;
+lift_56 ->  [lift_57, false, lift_58, lift_58, false];
+lift_55 ->  [];
+lift_51 ->  <arg_52, arg_53, arg_54>;
+lift_39 ->  ({d: "bT*/x-v=<H?hA416]1#90'9y&Pl3:b<y)G9C8eKRzYAzP-g2E%,U~>J @H#fs[!^K?Jg^lI-.gRop  ?YWVM}* '"});
+lift_38 ->  -1740359514;
+lift_33 ->  <arg_34, arg_35, arg_36>;
+lift_32 ->  lift_33;
+lift_31 ->  lift_32;
+lift_30 ->  lift_31;
+lift_29 ->  lift_30;
+lift_28 ->  lift_29;
+lift_27 ->  ({e: lift_28});
+lift_26 ->  lift_27;
+lift_25 ->  lift_26;
+lift_24 ->  ({a: lift_25});
+lift_23 ->  -1543044424;
+lift_19 ->  <arg_20, arg_21, arg_22>;
+lift_18 ->  lift_19;
+lift_17 ->  ({e: lift_18});
+lift_15 ->  ({});
+lift_14 ->  lift_15;
+lift_10 ->  <arg_11, arg_12, arg_13>;
+lift_9 ->  lift_10;
+lift_8 ->  ({e: lift_9});
+lift_7 ->  [lift_8, lift_8, lift_17];
+lift_6 ->  21492682;
+lift_5 ->  -84863781;
+lift_4 ->  [lift_5, lift_6, lift_6, lift_6, -363495177];
+lift_3 ->  [lift_4, lift_4, lift_4, lift_4];
+lift_2 ->  ({c: lift_3});
+lift_1 ->  lift_2.c;
+{
+    lift_183 ->  lift_184;
+    lift_166 ->  ({b: lift_167});
+    lift_154 ->  [lift_155];
+    lift_151 ->  [];
+    lift_121 ->  lift_122;
+    lift_120 ->  ["e54_0)[7h2*ngCVeV)cQxE}S iF#Pn_4_C;sR4 TE`Hm!*`1iD9_W b*^$IznN}o|~z(O", ".ekp{=Sr_[YS\\cj~gZ<=F`y%m*YKojyGJGVL)v`YS?#^F<T;>8Xnq*%*#}$4[", lift_71];
+    lift_119 ->  lift_120;
+    lift_118 ->  lift_57;
+    lift_117 ->  [lift_23, lift_6, lift_66, lift_66, lift_38];
+    lift_95 ->  array_safe_reference(lift_96(lift_117, lift_56, [true, lift_58, lift_118], lift_119, lift_85), lift_66, lift_121(lift_93, lift_5, ({}), lift_56, ({}))).b;
+    lift_72 ->  lift_73;
+    lift_70 ->  ({});
+    lift_69 ->  <>;
+    lift_68 ->  [lift_69, lift_69, lift_72, lift_72];
+    lift_62 ->  lift_63;
+    lift_61 ->  lift_62;
+    lift_59 ->  ({c: lift_60});
+    lift_50 ->  lift_51;
+    lift_49 ->  "| 7K-qZUuOR0gKAnS;fg=YGR<&w4G?hybse7ZI^QV\\a\\N1@\\uFJOT-Ns(w^k1&.~6Rw}#rg%,HF5} Ue:UsR";
+    lift_48 ->  true;
+    lift_40 ->  <arg_41, arg_42, arg_43, arg_44, arg_45>;
+    array_safe_reference(array_safe_reference(lift_1, array_safe_reference(lift_7, lift_5, lift_24.a).e(lift_39.d, array_safe_reference(lift_40(lift_23, lift_56, lift_15, ({}), lift_57)(lift_59.c, 488171448, lift_6), string-length({f: lift_60}).f, lift_33(safe_string_append(lift_60, lift_60), array_safe_reference(lift_55, 489563983, -33008271), lift_39.d)), array_safe_reference(lift_61(lift_57, lift_15), lift_38, array_safe_reference(lift_68, lift_6, lift_72))()), lift_79.e()), lift_85, lift_86(array_safe_reference(array_safe_reference(array_safe_reference([], lift_38, [lift_3]), lift_38, lift_3), lift_5, array_safe_reference(<arg_94>(lift_71), lift_19(lift_60, lift_38, "qS.H%Q:C>+g?fsk 5c~P=!wg$sjbZCNV;krxP#oI1hN7`Vyxsy-/A;A["), lift_55))).e);
+    lift_25.e = lift_95.f;
+    b_136 = array_safe_reference(lift_137, lift_6, array_safe_reference(array_safe_reference(lift_151, -1344856040, lift_137), lift_146.e, lift_146)).e
+    
+    
+}
+
+

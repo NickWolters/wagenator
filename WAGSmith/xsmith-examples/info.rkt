@@ -1,0 +1,70 @@
+#lang info
+;; -*- mode: Racket -*-
+;;
+;; Copyright (c) 2017-2020 The University of Utah
+;; All rights reserved.
+;;
+;; This file is part of Xsmith, a generator of highly effective fuzz testers.
+;;
+;; Redistribution and use in source and binary forms, with or without
+;; modification, are permitted provided that the following conditions are met:
+;;
+;;   * Redistributions of source code must retain the above copyright notice,
+;;     this list of conditions and the following disclaimer.
+;;
+;;   * Redistributions in binary form must reproduce the above copyright
+;;     notice, this list of conditions and the following disclaimer in the
+;;     documentation and/or other materials provided with the distribution.
+;;
+;; THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+;; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+;; IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+;; ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+;; LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+;; CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+;; SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+;; INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+;; CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+;; ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+;; POSSIBILITY OF SUCH DAMAGE.
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(define name "xsmith-examples")
+(define version "2.0.7")
+(define git-commit "$Format:%h$")
+
+(define racket-launcher-names
+  '("xsmith-cish"
+    "xsmith-schemely"
+    "xsmith-verilog"
+    ))
+(define racket-launcher-libraries
+  '("cish/cish.rkt"
+    "schemely/schemely.rkt"
+    "verilog/verilog.rkt"
+    ))
+(define scribblings
+  '(("scribblings/xsmith-examples.scrbl")))
+(define deps
+  '("base"
+    "version-string-with-git-hash"
+    "rackunit-lib"
+    "at-exp-lib"
+    "pprint"
+    "racr"
+    "xsmith"
+    ;"rosette"
+    "clotho"
+    "math-lib"
+    ))
+(define build-deps '("scribble-lib"
+                     ))
+
+(define compile-omit-paths '("future" "cish"))
+(define test-omit-paths '("future"))
+(define license 'BSD-2-Clause)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; End of file.
